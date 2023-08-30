@@ -2,7 +2,8 @@
 <div id="app"></div>
 <script type="module">
     import { createApp } from "vue/dist/vue.esm-bundler.js";
-    import SmartyUI, { SFCButton, JSXButton, MyButton } from "../../dist/smarty-ui.mjs";
+    import RaspberryTart, { SFCButton, JSXButton, MyButton, UnoCssButton } from "../../dist/raspberry-tart.mjs";
+
 
     createApp({
         template: `
@@ -11,7 +12,7 @@
             <SFCButton/>    
             `,
     })
-        .use(SmartyUI, {
+        .use(RaspberryTart, {
     })
         .component(SFCButton.name, SFCButton)
         .component(JSXButton.name, JSXButton)
