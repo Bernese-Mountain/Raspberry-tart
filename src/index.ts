@@ -19,9 +19,14 @@ import RaspberryTart from './entry'
 
 createApp({
     template:`
-        <div>
-            <UnoCssButton>普通按钮</UnoCssButton>
-        </div>
+    <div>
+    <UnoCssButton color="blue">蓝色按钮</UnoCssButton>
+    <UnoCssButton color="green">绿色按钮</UnoCssButton>
+    <UnoCssButton color="gray">灰色按钮</UnoCssButton>
+    <UnoCssButton color="yellow">黄色按钮</UnoCssButton>
+    <UnoCssButton color="red">红色按钮</UnoCssButton>
+   </div>
+  
     `
 })
 .use(RaspberryTart)
