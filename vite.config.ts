@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from '@vitejs/plugin-vue-jsx'
@@ -17,7 +18,6 @@ const rollupOptions = {
 };
 
 export default defineConfig({
-
   plugins: [
         vue(),
         vueJsx({
@@ -25,17 +25,17 @@ export default defineConfig({
         }),
         Unocss()
     ],
-build: {
-        cssCodeSplit: true,
-        rollupOptions,
-        minify:false,
-        lib: {
-        entry: "./src/entry.ts",
-        name: "RaspberryTart",
-        fileName: "raspberry-tart",
-        // 导出模块格式
-        formats: ["es", "umd","iife"],
-        },
-    },
+  build: {
+          cssCodeSplit: true,
+          rollupOptions,
+          minify:false,
+          lib: {
+          entry: "./src/entry.ts",
+          name: "RaspberryTart",
+          fileName: "raspberry-tart",
+          // 导出模块格式
+          formats: ["es", "umd","iife"],
+          },
+      },
 
 });
