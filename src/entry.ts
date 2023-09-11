@@ -4,7 +4,6 @@ import SFCButton from "./vueButton/SFCButton.vue";
 import JSXButton from "./TSXButton/TSXButton";
 import UnocssButton from "./UnoCssButton/UnocssButton";
 
-
 // 导出单独组件
 export { MyButton, SFCButton, JSXButton, UnocssButton };
 
@@ -17,5 +16,4 @@ export default {
     app.component(JSXButton.name, JSXButton);
     app.component(UnocssButton.name, UnocssButton);
   },
-
 };
