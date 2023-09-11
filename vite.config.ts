@@ -37,16 +37,16 @@ export default defineConfig({
         Unocss()
     ],
   build: {
-          cssCodeSplit: true,
-          rollupOptions,
-          minify:false,
-          lib: {
+        sourcemap: true, // 输出单独 source文件
+        rollupOptions,
+        minify: 'terser', // boolean | 'terser' | 'esbuild'
+        cssCodeSplit: true,
+        lib: {
           entry: "./src/entry.ts",
-          name: "RaspberryTart",
-          fileName: "raspberry-tart",
-          // 导出模块格式
-          formats: ["es", "umd","iife"],
-          },
+          name: "SmartyUI",
+          fileName: "smarty-ui",
+          formats: ["es", "umd", "iife"], // 导出模块类型
+        },
       },
 
 });
