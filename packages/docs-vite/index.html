@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>🔨 SmartyUI Demo</h1>
+    <div id="app"></div>
+    <script type="module">
+        import { createApp } from "vue/dist/vue.esm-bundler.js";
+        import RaspberryTart, { SFCButton, JSXButton, MyButton, UnoCssButton } from "raspberry-tart/dist/raspberry-tart.mjs";
+
+        createApp({
+            template: `
+        <div style="margin-bottom:20px;">
+            <SFCButton color="blue">主要按钮</SFCButton>
+        </div>
+    `}).use(RaspberryTart).mount('#app')
+
+    </script>
+</body>
+
+</html>
