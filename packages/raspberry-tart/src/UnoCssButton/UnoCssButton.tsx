@@ -1,20 +1,31 @@
-import { defineComponent,PropType,toRefs} from "vue";
+import { defineComponent, PropType } from "vue";
 import "uno.css";
+import button from "../button";
 
-export type IColor = 'black' | 'gray' | 'red' | 'yellow' | 'green'|'blue'|'indigo'|'purple'|'pink'
+export type IColor =
+  | "black"
+  | "gray"
+  | "red"
+  | "yellow"
+  | "green"
+  | "blue"
+  | "indigo"
+  | "purple"
+  | "pink";
 export const props = {
   color: {
     type: String as PropType<IColor>,
-    default: 'blue'  // 设定默认颜色
+    default: "blue", // 设定默认颜色
   },
-}
+};
 
 export default defineComponent({
-    name: "UnoCssButton",
-    props,
-    setup(props, {slots}) {
-       return () => <button 
-             class={`
+  name: "UnoCssButton",
+  props,
+  setup(props, { slots }) {
+    return () => (
+      <button
+        class={`
                 py-2 
                 px-4 
                 font-semibold 
@@ -27,9 +38,9 @@ export default defineComponent({
                 cursor-pointer 
                 m-1
                 `}
-             > 
-             {slots.default ? slots.default() : ''}
-        </button>
-    }
- });
- 
+      >
+        {slots.default ? slots.default() : ""}
+      </button>
+    );
+  },
+});
