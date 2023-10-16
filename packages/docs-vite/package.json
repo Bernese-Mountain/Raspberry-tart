@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "raspberry-tart": "workspace:^0.1.0"
+    "raspberry-tart": "workspace:^1.0.0"
   }
 }
