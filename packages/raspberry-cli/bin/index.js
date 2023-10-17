@@ -9,7 +9,7 @@ import chalkAnimation from "chalk-animation";
 
 const log = (content) => console.log(chalk.green(content));
 const opt = {
-  "SmartyUI应用模版(Vite)": "raspberry-ui-vite",
+  "Raspberry-Tart应用模版(Vite)": "Raspberry-Tart-vite",
   SmartyAdmin模版: "admin",
   组件库脚手架: "uitemplate",
   组件库文档网站: "uitemplate",
@@ -27,7 +27,7 @@ const question = [
 
 // 打印欢迎画面
 clear();
-const logo = figlet.textSync("Raspberry-UI!", {
+const logo = figlet.textSync("Raspberry-Tart!", {
   // font: "Ghost",
   horizontalLayout: "default",
   verticalLayout: "default",
@@ -41,6 +41,9 @@ setTimeout(() => {
   query();
 }, 500);
 
+// Debug
+// const { default: op } = await import(`../lib/operations/smarty-ui-vite.js`);
+// op()
 
 async function query() {
   const answer = await inquirer.prompt(question);
